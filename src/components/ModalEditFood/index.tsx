@@ -14,10 +14,12 @@ interface ModalEditFoodProps {
 }
 
 interface FormEditFood {
-  image: string,
+  id: number,
   name: string,
-  price: string,
   description: string,
+  price: number,
+  available: boolean,
+  image: string,
 }
 
 export const ModalEditFood = (props: ModalEditFoodProps) => {
