@@ -16,7 +16,7 @@ interface InputProps {
   placeholder: string,
 }
 
-export const Input = ({ name, icon: Icon, placeholder }: InputProps) => {
+export const Input = ({ name, placeholder }: InputProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [isFocused, setIsFocused] = useState(false);
@@ -44,7 +44,6 @@ export const Input = ({ name, icon: Icon, placeholder }: InputProps) => {
 
   return (
     <Container isFilled={isFilled} isFocused={isFocused}>
-      {Icon && <Icon size={20} />}
 
       <input
         onFocus={handleInputFocus}
